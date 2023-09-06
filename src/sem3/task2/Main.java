@@ -5,8 +5,10 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         FileManager fileManager = new FileManager();
-        fileManager.read("ExceptionsHw.iml");
-        fileManager.write("ExceptionsHw.iml", "123");
+        fileManager.write("newFile.xml", "Content");
+        fileManager.read("newFile.xml");
+        fileManager.copy("newFile.xml", "anotherFile.xml");
+        fileManager.read("anotherFile.xml");
 
     }
 }
